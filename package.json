@@ -8,11 +8,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@bitbucket.org/svift/utils.git"
+    "url": "git+https://git@github.com/svift-org/utils.git"
   },
   "author": "Sebastian Meier",
   "license": "MIT",
-  "homepage": "https://bitbucket.org/svift/utils#readme",
+  "homepage": "https://github.com/svift-org/utils#readme",
   "dependencies": {
     "fs": "0.0.1-security"
   }
