@@ -8,7 +8,7 @@
 
 var fs = require('fs')
 
-var render = (function () {
+var utils = (function () {
  
   var module = {}
 
@@ -17,7 +17,7 @@ var render = (function () {
       fs.readdirSync(path).forEach(function(file,index){
         var curPath = path + "/" + file;
         if(fs.lstatSync(curPath).isDirectory()) { // recurse
-          deleteFolderRecursive(curPath);
+          module.deleteFolderRecursive(curPath);
         } else { // delete file
           fs.unlinkSync(curPath);
         }
@@ -30,4 +30,4 @@ var render = (function () {
  
 })();
 
-module.exports = render;
+module.exports = utils;
