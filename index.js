@@ -26,6 +26,31 @@ var utils = (function () {
     }
   }
 
+  module.array2csv = function (array, header) {
+    let csv = ''
+    if(header){
+      header.forEach((d,i)=>{
+        if(i>0){
+          csv += ','
+        }
+        csv += d
+      })
+      csv += '\n'
+    }
+    array.forEach((d,i) => {
+      if(i>0){
+        csv += '\n'
+      }
+      d.forEach((dd,ii)=>{
+        if(ii>0){
+          csv += ','
+        }
+        csv += dd
+      })
+    })
+    return csv
+  }
+
   return module;
  
 })();
